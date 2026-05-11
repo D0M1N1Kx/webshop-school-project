@@ -8,7 +8,12 @@
 </head>
 
 <body>
-
+    <?php
+    require_once "db_config.php";
+    if ($connection) {
+        echo "<p> DATABASE: " . DATABASE . "</p>";
+    }
+    ?>
 </body>
 
 </html>
