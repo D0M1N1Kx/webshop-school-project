@@ -51,6 +51,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <div class="form-container">
         <h2>Regisztráció</h2>
 
+        <?php
+        if ($error) {
+            echo '<p class="error">' . $error . '</p>';
+        }
+        ?>
+
         <form method="POST">
             <label>Felhasználónév</label>
             <input type="text" name="username">
