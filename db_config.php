@@ -6,5 +6,5 @@ define("DATABASE", "webshop");
 
 $connection = mysqli_connect(HOST, USER, PASSWORD, DATABASE);
 
-if (!$connection)
-    die("Connection failed: " . mysqli_connect_error());
+if ($connection->connect_error)
+    die("Connection failed: " . $connection->connect_error);
