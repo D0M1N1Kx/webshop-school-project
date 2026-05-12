@@ -24,4 +24,19 @@ class UserService
         // create cart
         return true;
     }
+
+    public function login(string $username, string $password): ?array
+    {
+        $stmt = $this->db->prepare(
+            "SELECT id, username, password FROM users WHERE username = ?"
+        );
+        $stmt->bind_param("s", $username);
+        $stmt->execute();
+        $result = $stmt->get_result()->fetch_assoc();
+
+        if (!$result || !password_verify($password, $result['password'])) {
+            return null;
+        }
+        return $result;
+    }
 }
