@@ -1,3 +1,9 @@
+<?php
+require_once "db_config.php";
+require_once "services/UserService.php";
+
+$userService = new UserService($connection);
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,12 +14,7 @@
 </head>
 
 <body>
-    <?php
-    require_once "db_config.php";
-    if ($connection) {
-        echo "<p> DATABASE: " . DATABASE . "</p>";
-    }
-    ?>
+
 </body>
 
 </html>
