@@ -21,7 +21,7 @@ class UserService
         if (!$stmt->execute()) return false;
 
         $userId = $stmt->insert_id;
-        // create cart
+        $this->createCart($userId);
         return true;
     }
 
@@ -38,5 +38,14 @@ class UserService
             return null;
         }
         return $result;
+    }
+
+    private function createCart(int $userId): void
+    {
+        $stmt = $this->db->prepare(
+            "INSERT INTO carts (user_id) VALUES (?)"
+        );
+        $stmt->bind_param("i", $userId);
+        $stmt->execute();
     }
 }
