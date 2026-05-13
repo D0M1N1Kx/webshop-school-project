@@ -37,42 +37,42 @@ require_once "services/UserService.php";
     <div class="content-container">
         <div class="category-bar">
             <div class="category-track">
-                <div class="category-item">
+                <a href="pages/products.php?category=notebook" class="category-item">
                     <img src="images/categories/notebook.webp" alt="Notebook">
                     <span>NOTEBOOK</span>
-                </div>
-                <div class="category-item">
+                </a>
+                <a href="pages/products.php?category=pc" class="category-item">
                     <img src="images/categories/pc.webp" alt="PC">
                     <span>PC</span>
-                </div>
-                <div class="category-item">
+                </a>
+                <a href="pages/products.php?category=motherboard" class="category-item">
                     <img src="images/categories/motherboard.webp" alt="Alaplap">
                     <span>ALAPLAP</span>
-                </div>
-                <div class="category-item">
+                </a>
+                <a href="pages/products.php?category=processor" class="category-item">
                     <img src="images/categories/processor.webp" alt="Processzor">
                     <span>PROCESSZOR</span>
-                </div>
-                <div class="category-item">
+                </a>
+                <a href="pages/products.php?category=videocard" class="category-item">
                     <img src="images/categories/videocard.webp" alt="Videókártya">
                     <span>VIDEÓKÁRTYA</span>
-                </div>
-                <div class="category-item">
+                </a>
+                <a href="pages/products.php?category=ssd" class="category-item">
                     <img src="images/categories/ssd.webp" alt="SSD">
                     <span>SSD</span>
-                </div>
-                <div class="category-item">
+                </a>
+                <a href="pages/products.php?category=hdd" class="category-item">
                     <img src="images/categories/hdd.webp" alt="HDD">
                     <span>HDD</span>
-                </div>
-                <div class="category-item">
+                </a>
+                <a href="pages/products.php?category=monitor" class="category-item">
                     <img src="images/categories/monitor.webp" alt="Monitor">
                     <span>MONITOR</span>
-                </div>
-                <div class="category-item">
+                </a>
+                <a href="pages/products.php?category=tv" class="category-item">
                     <img src="images/categories/tv.webp" alt="TV">
                     <span>TV</span>
-                </div>
+                </a>
             </div>
         </div>
     </div>
