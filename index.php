@@ -33,6 +33,10 @@ require_once "services/UserService.php";
         }
         ?>
     </nav>
+
+    <div class="content-container">
+
+    </div>
 </body>
 
 </html>

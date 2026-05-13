@@ -33,3 +33,15 @@ nav {
     font-weight: bold;
     color: white;
 }
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.content-container {
+    background-color: #1a1a1a;
+    min-height: 100vh;
+    padding-top: 60px;
+    box-sizing: border-box;
+}
