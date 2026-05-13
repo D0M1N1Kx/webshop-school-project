@@ -35,7 +35,46 @@ require_once "services/UserService.php";
     </nav>
 
     <div class="content-container">
-
+        <div class="category-bar">
+            <div class="category-track">
+                <div class="category-item">
+                    <img src="images/categories/notebook.webp" alt="Notebook">
+                    <span>NOTEBOOK</span>
+                </div>
+                <div class="category-item">
+                    <img src="images/categories/pc.webp" alt="PC">
+                    <span>PC</span>
+                </div>
+                <div class="category-item">
+                    <img src="images/categories/motherboard.webp" alt="Alaplap">
+                    <span>ALAPLAP</span>
+                </div>
+                <div class="category-item">
+                    <img src="images/categories/processor.webp" alt="Processzor">
+                    <span>PROCESSZOR</span>
+                </div>
+                <div class="category-item">
+                    <img src="images/categories/videocard.webp" alt="Videókártya">
+                    <span>VIDEÓKÁRTYA</span>
+                </div>
+                <div class="category-item">
+                    <img src="images/categories/ssd.webp" alt="SSD">
+                    <span>SSD</span>
+                </div>
+                <div class="category-item">
+                    <img src="images/categories/hdd.webp" alt="HDD">
+                    <span>HDD</span>
+                </div>
+                <div class="category-item">
+                    <img src="images/categories/monitor.webp" alt="Monitor">
+                    <span>MONITOR</span>
+                </div>
+                <div class="category-item">
+                    <img src="images/categories/tv.webp" alt="TV">
+                    <span>TV</span>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 
