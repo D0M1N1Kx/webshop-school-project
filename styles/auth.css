@@ -1,0 +1,38 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+    width: 30vw;
+    padding-top: 20vh;
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    button {
+        font-size: 1.3rem;
+        width: 20vw;
+        align-self: center;
+        margin-top: 2vh;
+    }
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+
+    input {
+        font-size: 1.3rem;
+    }
+}

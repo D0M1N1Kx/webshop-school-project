@@ -50,11 +50,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         ?>
 
         <form method="POST">
-            <label>Felhasználónév</label>
-            <input type="text" name="username">
+            <div class="input">
+                <label for="username">Felhasználónév</label>
+                <input type="text" name="username">
+            </div>
 
-            <label>Jelszó</label>
-            <input type="password" name="password">
+            <div class="input">
+                <label for="password">Jelszó</label>
+                <input type="password" name="password">
+            </div>
 
             <button type="submit">Bejelentkezés</button>
         </form>

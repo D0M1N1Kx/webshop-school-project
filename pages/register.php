@@ -58,14 +58,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         ?>
 
         <form method="POST">
-            <label>Felhasználónév</label>
-            <input type="text" name="username">
+            <div class="input">
+                <label>Felhasználónév</label>
+                <input type="text" name="username">
+            </div>
 
-            <label>Jelszó</label>
-            <input type="password" name="password">
+            <div class="input">
+                <label>Jelszó</label>
+                <input type="password" name="password">
+            </div>
 
-            <label>Jelszó megerősítése</label>
-            <input type="password" name="confirm_password">
+            <div class="input">
+                <label>Jelszó megerősítése</label>
+                <input type="password" name="confirm_password">
+            </div>
 
             <button type="submit">Regisztráció</button>
         </form>
