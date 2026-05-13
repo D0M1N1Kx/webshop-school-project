@@ -12,6 +12,7 @@ body {
     position: relative;
     width: 30vw;
     padding-top: 20vh;
+    color: #1a1a1a;
 
     form {
         display: flex;

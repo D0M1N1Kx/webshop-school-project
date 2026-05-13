@@ -1,5 +1,5 @@
 nav {
-    background-color: #333333;
+    background-color: #222222;
     position: fixed;
     top: 0;
     left: 0;
@@ -40,8 +40,9 @@ body {
 }
 
 .content-container {
-    background-color: #1a1a1a;
+    background-color: #f8f8f8;
     min-height: 100vh;
     padding-top: 60px;
     box-sizing: border-box;
+    color: #1a1a1a;
 }
