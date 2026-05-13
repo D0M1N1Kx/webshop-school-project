@@ -71,7 +71,6 @@ body {
     min-width: 120px;
     transition: background-color 0.2s;
     text-decoration: none;
-    color: inherit;
 }
 
 .category-item:hover {
