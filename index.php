@@ -10,15 +10,16 @@ require_once "services/UserService.php";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Webshop</title>
+    <link rel="stylesheet" href="styles/index.css">
 </head>
 
 <body>
     <nav>
         <?php
-        echo '<a href="index.php">Főoldal</a>';
+        echo '<a href="index.php" class="home">Főoldal</a>';
 
         if (isset($_SESSION['user_id'])) {
-            echo '<span>Szia, ' . htmlspecialchars($_SESSION['username']) . '!</span>';
+            echo '<span class="welcome-text">Szia, ' . htmlspecialchars($_SESSION['username']) . '!</span>';
             echo '<a href="pages/cart.php">Kosár</a>';
 
             if ($_SESSION['role'] === 'admin') {
