@@ -29,3 +29,8 @@ CREATE TABLE cart_items (
 	FOREIGN KEY (cart_id) REFERENCES carts(id) ON DELETE CASCADE,
 	FOREIGN KEY (product_id) REFERENCES products(id) ON DELETE CASCADE
 );
+
+CREATE VIEW product_by_category AS
+SELECT * FROM products
+WHERE stock > 0
+ORDER BY category, name;
