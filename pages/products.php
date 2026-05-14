@@ -61,7 +61,33 @@ if ($category) {
                 </div>
             </div>
         </div>
-        <div class="products-container">Termekek</div>
+        <div class="products-container">
+            <div class="products-header">
+                <div class="products-title">
+                    <h2><?= htmlspecialchars($category ?? 'Összes termék') ?></h2>
+                    <span class="product-count"><?= count($products) ?> termék</span>
+                </div>
+                <div class="products-search">
+                    <input type="text" id="search-input" placeholder="Keresés...">
+                </div>
+            </div>
+
+            <div class="products-grid" id="products-grid">
+                <?php foreach ($products as $product): ?>
+                    <div class="product-card">
+                        <img src="../images/products/<?= htmlspecialchars($product['image']) ?>" alt="<?= htmlspecialchars($product['name']) ?>">
+                        <div class="product-info">
+                            <p class="product-name"><?= htmlspecialchars($product['name']) ?></p>
+                            <p class="product-price"><?= number_format($product['price'], 0, ',', '') ?> Ft</p>
+                        </div>
+                        <div class="product-actions">
+                            <input type="number" value="1" min="1" class="quantity-input">
+                            <button class="add-to-cart" onclick="addToCart(<?= $product['id'] ?>)">🛒</button>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+        </div>
     </div>
 
 </body>
