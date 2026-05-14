@@ -78,7 +78,7 @@ if ($category) {
                         <img src="../images/products/<?= htmlspecialchars($product['image']) ?>" alt="<?= htmlspecialchars($product['name']) ?>">
                         <div class="product-info">
                             <p class="product-name"><?= htmlspecialchars($product['name']) ?></p>
-                            <p class="product-price"><?= number_format($product['price'], 0, ',', '') ?> Ft</p>
+                            <p class="product-price"><?= number_format($product['price'], 0, ',', ' ') ?> Ft</p>
                         </div>
                         <div class="product-actions">
                             <input type="number" value="1" min="1" class="quantity-input">

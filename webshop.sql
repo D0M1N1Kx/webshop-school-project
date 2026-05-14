@@ -34,3 +34,8 @@ CREATE VIEW product_by_category AS
 SELECT * FROM products
 WHERE stock > 0
 ORDER BY category, name;
+
+INSERT INTO products (name, description, price, stock, category, image) VALUES
+('ASUS Vivobook 15', 'Intel i5, 8GB RAM, 512GB SSD', 280090, 10, 'notebook', 'images/products/asus_vivobook.webp'),
+('LENOVO IdeaPad Slim 3', 'AMD Ryzen 5, 16GB RAM', 199989, 5, 'notebook', 'images/products/lenovo_ideapad.webp'),
+('ACER Nitro V', 'Intel i7, RTX 4060, 16GB RAM', 389990, 3, 'notebook', 'images/products/acer_nitro.webp');
