@@ -10,7 +10,7 @@ nav {
     flex-direction: row;
     gap: 2rem;
     justify-content: center;
-    padding: 1rem 1rem;
+    padding: 0.5rem 1rem;
 
     a {
         color: white;
@@ -32,6 +32,7 @@ nav {
     font-size: 1rem;
     font-weight: bold;
     color: white;
+    padding-top: 0.3rem;
 }
 
 body {

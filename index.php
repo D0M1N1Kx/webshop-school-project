@@ -11,25 +11,26 @@ require_once "services/UserService.php";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Webshop</title>
     <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 </head>
 
 <body>
     <nav>
         <?php
-        echo '<a href="index.php" class="home">Főoldal</a>';
+        echo '<a href="../index.php" class="home"><span class="material-symbols-outlined">home</span></a>';
 
         if (isset($_SESSION['user_id'])) {
             echo '<span class="welcome-text">Szia, ' . htmlspecialchars($_SESSION['username']) . '!</span>';
-            echo '<a href="pages/cart.php">Kosár</a>';
+            echo '<a href="cart.php"><span class="material-symbols-outlined">shopping_cart</span></a>';
 
             if ($_SESSION['role'] === 'admin') {
-                echo '<a href="pages/admin.php">Admin</a>';
+                echo '<a href="admin.php"><span class="material-symbols-outlined">database_search</span></a>';
             }
 
-            echo '<a href="pages/logout.php">Kilépés</a>';
+            echo '<a href="logout.php"><span class="material-symbols-outlined">logout</span></a>';
         } else {
-            echo '<a href="pages/login.php">Bejelentkezés</a>';
-            echo '<a href="pages/register.php">Regisztráció</a>';
+            echo '<a href="login.php"><span class="material-symbols-outlined">login</span></a>';
+            echo '<a href="register.php"><span class="material-symbols-outlined">account_box</span></a>';
         }
         ?>
     </nav>
