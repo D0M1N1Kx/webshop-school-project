@@ -76,7 +76,7 @@ if ($category) {
             <div class="products-grid" id="products-grid">
                 <?php foreach ($products as $product): ?>
                     <div class="product-card">
-                        <img src="../images/products/<?= htmlspecialchars($product['image']) ?>" alt="<?= htmlspecialchars($product['name']) ?>">
+                        <img src="../<?= htmlspecialchars($product['image']) ?>" alt="<?= htmlspecialchars($product['name']) ?>">
                         <div class="product-info">
                             <p class="product-name"><?= htmlspecialchars($product['name']) ?></p>
                             <p class="product-price"><?= number_format($product['price'], 0, ',', ' ') ?> Ft</p>

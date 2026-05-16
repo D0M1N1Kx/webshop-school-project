@@ -67,7 +67,7 @@ $grandTotal = 0;
                         $grandTotal += $subtotal;
                     ?>
                         <div class="cart-item" id="item-<?= $item['cart_item_id'] ?>">
-                            <img src="../images/products/<?= htmlspecialchars($item['image']) ?>" alt="<?= htmlspecialchars($item['name']) ?>">
+                            <img src="../<?= htmlspecialchars($item['image']) ?>" alt="<?= htmlspecialchars($item['name']) ?>">
                             
                             <div class="item-info">
                                 <h3><?= htmlspecialchars($item['name']) ?></h3>
