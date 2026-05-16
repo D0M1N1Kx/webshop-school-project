@@ -94,17 +94,31 @@ if ($category) {
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const searchInput = document.getElementById('search-input');
+            const minPriceInput = document.getElementById('min-price-input');
+            const maxPriceInput = document.getElementById('max-price-input');
+
             const productCards = document.querySelectorAll('.product-card');
             const countSpan = document.querySelector('.product-count');
 
-            searchInput.addEventListener('input', function () {
+            function filterProducts() {
                 const searchTerm = searchInput.value.toLowerCase().trim();
+
+                const minPrice = parseFloat(minPriceInput.value) || 0;
+                const maxPrice = parseFloat(maxPriceInput.value) || Infinity;
+
                 let visibleCount = 0;
 
                 productCards.forEach(card => {
                     const productName = card.querySelector('.product-name').textContent.toLowerCase();
 
-                    if (productName.includes(searchTerm)) {
+                    const priceText = card.querySelector('.product-price').textContent;
+                    const productPrice = parseFloat(priceText.replace(/[^0-9]/g, ''));
+
+                    const matchesSearch = productName.includes(searchTerm);
+                    const matchesMinPrice = productPrice >= minPrice;
+                    const matchesMaxPrice = productPrice <= maxPrice;
+
+                    if (matchesSearch && matchesMinPrice && matchesMaxPrice) {
                         card.style.display = '';
                         visibleCount++;
                     } else {
@@ -115,7 +129,11 @@ if ($category) {
                 if (countSpan) {
                     countSpan.textContent = visibleCount + ' termék';
                 }
-            });
+            }
+
+            searchInput.addEventListener('input', filterProducts);
+            minPriceInput.addEventListener('input', filterProducts);
+            maxPriceInput.addEventListener('input', filterProducts);
         });
     </script>
 
