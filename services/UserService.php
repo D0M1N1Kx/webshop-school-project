@@ -28,7 +28,7 @@ class UserService
     public function login(string $username, string $password): ?array
     {
         $stmt = $this->db->prepare(
-            "SELECT id, username, password FROM users WHERE username = ?"
+            "SELECT id, username, password, role FROM users WHERE username = ?"
         );
         $stmt->bind_param("s", $username);
         $stmt->execute();
@@ -37,6 +37,9 @@ class UserService
         if (!$result || !password_verify($password, $result['password'])) {
             return null;
         }
+
+        unset($result['password']);
+        
         return $result;
     }
 
