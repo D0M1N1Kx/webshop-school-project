@@ -33,4 +33,15 @@ class ProductService
         $stmt->execute();
         return $stmt->get_result()->fetch_assoc();
     }
+
+    public function addProduct(string $name, string $description, int $price, int $stock, string $category, string $image): bool {
+        $stmt = $this->db->prepare(
+            "INSERT INTO products (name, description, price, stock, category, image) VALUES (?, ?, ?, ?, ?, ?)"
+        );
+        $fullImagePath = "images/products/" . $image;
+
+        $stmt->bind_param("ssiiss", $name, $description, $price, $stock, $category, $fullImagePath);
+
+        return $stmt->execute();
+    }
 }
