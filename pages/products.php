@@ -91,6 +91,34 @@ if ($category) {
         </div>
     </div>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const searchInput = document.getElementById('search-input');
+            const productCards = document.querySelectorAll('.product-card');
+            const countSpan = document.querySelector('.product-count');
+
+            searchInput.addEventListener('input', function () {
+                const searchTerm = searchInput.value.toLowerCase().trim();
+                let visibleCount = 0;
+
+                productCards.forEach(card => {
+                    const productName = card.querySelector('.product-name').textContent.toLowerCase();
+
+                    if (productName.includes(searchTerm)) {
+                        card.style.display = '';
+                        visibleCount++;
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+
+                if (countSpan) {
+                    countSpan.textContent = visibleCount + ' termék';
+                }
+            });
+        });
+    </script>
+
 </body>
 
 </html>
