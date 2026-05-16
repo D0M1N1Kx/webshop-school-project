@@ -135,6 +135,27 @@ if ($category) {
             minPriceInput.addEventListener('input', filterProducts);
             maxPriceInput.addEventListener('input', filterProducts);
         });
+
+        function addToCart(productId) {
+            const button = event.currentTarget;
+            const quantityInput = button.parentElement.querySelector('.quantity-input');
+            const quantity = quantityInput ? parseInt(quantityInput.value) : 1;
+
+            fetch('add_to_cart.php', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: `product_id=${productId}&quantity=${quantity}`
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert('A termék bekerült a kosárba!');
+                } else {
+                    alert('Hiba: ' + data.message);
+                }
+            })
+            .catch(error => console.error('Hiba történt: ', error));
+        }
     </script>
 
 </body>
